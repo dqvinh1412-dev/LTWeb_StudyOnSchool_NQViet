@@ -1,23 +1,28 @@
 package murach.business;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
+    private LocalDate dateOfBirth;
 
-    // Constructor mặc định
     public User() {
-        this.firstName = "";
-        this.lastName = "";
-        this.email = "";
     }
 
+    // Dùng cho luồng EmailListServlet cũ, không thu thập ngày sinh.
     public User(String firstName, String lastName, String email) {
+        this(firstName, lastName, email, null);
+    }
+
+    public User(String firstName, String lastName, String email,
+                LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName() {
@@ -42,5 +47,13 @@ public class User implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }
