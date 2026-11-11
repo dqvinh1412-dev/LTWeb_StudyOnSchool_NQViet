@@ -2,7 +2,6 @@ package murach.email;
 
 import murach.business.User;
 import murach.data.UserDB;
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,8 +26,6 @@ public class EmailListServlet extends HttpServlet {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
-
-            // Lấy IP của người dùng truy cập web
             String ip = request.getHeader("X-Forwarded-For");
             if (ip == null || ip.isEmpty()) {
                 ip = request.getRemoteAddr();
@@ -36,11 +33,9 @@ public class EmailListServlet extends HttpServlet {
 
             User user = new User(firstName, lastName, email);
             UserDB.insert(user, ip);
-
             request.setAttribute("user", user);
             url = "/thanks.jsp";
         }
-
         getServletContext().getRequestDispatcher(url).forward(request, response);
     }
 

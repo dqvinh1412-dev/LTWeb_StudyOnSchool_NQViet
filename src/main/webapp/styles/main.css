@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+h1 {
+    color: teal;
+}
+
+h2 {
+    color: teal;
+}
+
+label {
+    float: left;
+    width: 8em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-row {
+    clear: both;
+    min-height: 2.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 20em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.3em;
+    box-sizing: border-box;
+}
+
+.choice-group {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.choice {
+    float: none;
+    width: auto;
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.choice input {
+    margin-right: 0.2em;
+}
+
+.checkbox-group {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.checkbox-group div {
+    margin-bottom: 0.7em;
+}
+
+.contact-row {
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.contact-row label {
+    float: none;
+    width: auto;
+    font-weight: normal;
+}
+
+select {
+    margin-left: 0.5em;
+    font-size: 11pt;
+}
+
+.submit-row {
+    clear: both;
+    margin-top: 1em;
+}
+
+#submit {
+    margin-left: 0;
+    margin-top: 0.5em;
+    padding: 0.3em 0.7em;
+    cursor: pointer;
+}
