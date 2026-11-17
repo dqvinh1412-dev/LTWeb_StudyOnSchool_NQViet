@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Murach's Java Servlets and JSP</title>
-
-    <link rel="stylesheet" href="styles/main.css" type="text/css">
-</head>
-
-<body>
+<%@ include file="includes/header.html" %>
 <img src="images/murachlogo.png" alt="Murach Logo" width="150">
 <h1>Survey</h1>
 <p>
@@ -23,22 +11,22 @@
 
     <div class="form-row">
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName">
+        <input type="text" id="firstName" name="firstName" required>
     </div>
 
     <div class="form-row">
         <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName">
+        <input type="text" id="lastName" name="lastName" required>
     </div>
 
     <div class="form-row">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
     </div>
 
     <div class="form-row">
         <label for="dateOfBirth">Date of Birth</label>
-        <input type="date" id="dateOfBirth" name="dateOfBirth">
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
     </div>
 
     <h2>How did you hear about us?</h2>
@@ -114,5 +102,4 @@
 
 </form>
 
-</body>
-</html>
+<%@ include file="includes/footer.jsp" %>
