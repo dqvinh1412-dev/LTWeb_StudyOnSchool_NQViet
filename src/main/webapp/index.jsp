@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Murach's Java Servlets and JSP</title>
-
-    <link rel="stylesheet" href="styles/main.css" type="text/css">
-</head>
-
-<body>
+<%@ include file="includes/header.html" %>
 <img src="images/murachlogo.png" alt="Murach Logo" width="150">
 <h1>Survey</h1>
 <p>
@@ -114,5 +102,4 @@
 
 </form>
 
-</body>
-</html>
+<%@ include file="includes/footer.jsp" %>

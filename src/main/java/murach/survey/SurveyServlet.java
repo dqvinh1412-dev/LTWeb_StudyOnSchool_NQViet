@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class SurveyServlet extends HttpServlet {
 
@@ -57,6 +59,9 @@ public class SurveyServlet extends HttpServlet {
 
         SurveyDTO result = new SurveyDTO(user, survey);
         request.setAttribute("result", result);
+
+        GregorianCalendar currentDate = new GregorianCalendar();
+        request.setAttribute("currentYear", currentDate.get(Calendar.YEAR));
 
         request.getRequestDispatcher("/thanks.jsp")
                 .forward(request, response);

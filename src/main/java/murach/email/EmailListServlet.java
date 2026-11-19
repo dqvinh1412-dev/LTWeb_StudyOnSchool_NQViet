@@ -14,14 +14,14 @@ public class EmailListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url = "/index.html";
+        String url = "/header.html";
         String action = request.getParameter("action");
         if (action == null) {
             action = "join";
         }
 
         if (action.equals("join")) {
-            url = "/index.html";
+            url = "/header.html";
         } else if (action.equals("add")) {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");

@@ -45,8 +45,10 @@
         </c:choose>
     </p>
 
-    <p>Cách liên hệ: <c:out value="${result.survey.contactBy}"/></p>
+    <c:if test="${result.survey.announcements or result.survey.productUpdates}">
+        <p>Cách liên hệ: <c:out value="${result.survey.contactBy}"/></p>
+    </c:if>
 
-    <p><a href="index.html">Quay lại khảo sát</a></p>
+    <p><a href="index.jsp">Quay lại khảo sát</a></p>
 </body>
 </html>
